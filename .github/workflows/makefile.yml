@@ -16,6 +16,9 @@ jobs:
 
     - name: Setup Docker
       uses: docker-practice/actions-setup-docker@v1
+      with:
+        docker_buildx: false
+        docker_cli_experimental: false
 
     - name: Build Batocera
       run: make x86_64-build
